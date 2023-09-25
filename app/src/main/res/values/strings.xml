@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">JustCode4</string>
+    <string name="hw">Hello world</string>
+    <string name="blabla">BLA BLA</string>
 </resources>
