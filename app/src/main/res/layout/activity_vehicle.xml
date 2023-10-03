@@ -11,8 +11,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="More Fonts..."
         android:text="My vehicle "
         android:textColor="#E6DAFF"
@@ -23,10 +23,10 @@
 
     <FrameLayout
         android:layout_width="0dp"
-        android:layout_height="150sp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="30dp"
+        android:layout_height="140sp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="35dp"
 
         android:background="@drawable/details_bg"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,9 +57,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="228dp"
         android:text="Nearby Chargers"
         android:textColor="#E6DAFF"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,12 +68,101 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="48dp"
+
         android:text="netherlands, amesterdam change location"
         android:textColor="#8E63EE"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="95sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="295dp"
+        android:layout_marginEnd="30dp"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:background="@drawable/details_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="80dp"
+                android:text="ChargePoint Station 1"
+                android:textColor="#D9C8FF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="95sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="405dp"
+        android:layout_marginEnd="30dp"
+
+        android:background="@drawable/details_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="88dp"
+            android:text="ChargePoint Station 1"
+            android:textColor="#D9C8FF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="95sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="515dp"
+        android:layout_marginEnd="30dp"
+
+        android:background="@drawable/details_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="88dp"
+                android:text="ChargePoint Station 1"
+                android:textColor="#D9C8FF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
