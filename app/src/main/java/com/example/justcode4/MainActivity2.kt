@@ -13,6 +13,7 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var binding: ActivityMain2Binding
     private var seconds:Int=0
     private var running:Boolean=false
+    private var wasRunning:Boolean=false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityMain2Binding.inflate(layoutInflater)
@@ -31,6 +32,13 @@ class MainActivity2 : AppCompatActivity() {
             }
         }
 
+        savedInstanceState?.let{
+            seconds=it.getInt(State.SECONDS.name)
+            running=it.getBoolean(State.RUNNING.name)
+            wasRunning=it.getBoolean(State.WAS_RUNNING.name)
+        }
+        runTimer()
+
     }
 
     private fun runTimer(){
@@ -41,19 +49,34 @@ class MainActivity2 : AppCompatActivity() {
                 val time=String.format(Locale.getDefault(),"%02d:%02d",minutes,seconds)
                 binding.timeView.text=time
 
+                if(running) seconds++
+                handler.postDelayed(this,1000)
+
             }
         })
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt(State.SECONDS.name,seconds)
+        outState.putBoolean(State.RUNNING.name,running)
+        outState.putBoolean(State.WAS_RUNNING.name,running)
+        super.onSaveInstanceState(outState)
+    }
     private fun resetClick() {
-        Toast.makeText(this,"Pause",Toast.LENGTH_SHORT).show()
+       // Toast.makeText(this,"Pause",Toast.LENGTH_SHORT).show()
+    seconds=0
+        running=false
+
     }
 
     private fun startClick() {
-        Toast.makeText(this,"Start",Toast.LENGTH_SHORT).show()
+      //  Toast.makeText(this,"Start",Toast.LENGTH_SHORT).show()
+    running=true
     }
 
     private fun pauseClick() {
-        Toast.makeText(this,"Reset",Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this,"Reset",Toast.LENGTH_SHORT).show()
+    running=false
     }
 
 
@@ -65,16 +88,19 @@ class MainActivity2 : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        running=wasRunning
         Log.e(this.javaClass.name,">>> onResume")
     }
 
     override fun onPause() {
         super.onPause()
+        running=false
         Log.e(this.javaClass.name,">>> onPause")
     }
 
     override fun onStop() {
         super.onStop()
+        running=false
         Log.e(this.javaClass.name,">>> onStop")
     }
 
@@ -85,6 +111,11 @@ class MainActivity2 : AppCompatActivity() {
 
     override fun onRestart() {
         super.onRestart()
+        running=true
         Log.e(this.javaClass.name,">>> onRestart")
     }
+}
+
+enum class State {
+    RUNNING,SECONDS,WAS_RUNNING
 }

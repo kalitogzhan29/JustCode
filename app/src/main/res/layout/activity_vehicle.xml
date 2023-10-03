@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Vehicle"
-    android:background="#33284E">
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/textView2"
@@ -24,10 +24,11 @@
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="150sp"
-        android:layout_marginStart="42dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="92dp"
-        android:layout_marginEnd="4dp"
-        android:background="#1A132B"
+        android:layout_marginEnd="30dp"
+
+        android:background="@drawable/details_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -35,6 +36,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             >
 
             <TextView
@@ -71,4 +73,6 @@
         android:textColor="#8E63EE"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
